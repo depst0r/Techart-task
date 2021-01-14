@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 
 export const Calculator = () => {
     return <>
@@ -10,8 +10,11 @@ export const Calculator = () => {
             <div className="card-body">
                 <span className='text-muted'>Шаг 1</span>
             <h5 className="card-title">Что будем строить?</h5>
-                <p className="card-text text-success font-weight-bold">Жилой Дом</p>
-                <p className="card-text text-success font-weight-bold">Гараж</p>
+                {/* <p className="card-text text-success font-weight-bold"></p> */}
+                <Link to='/house' className="card-text text-success font-weight-bold">Жилой Дом</Link>
+                <br/>
+                <Link to='/garage' className="card-text text-success font-weight-bold">Гараж</Link>
+                <p className="card-text text-success font-weight-bold"></p>
             </div>
             <div className="card-footer text-muted">
                 <button type="button" className="btn btn-outline-warning">Отмена</button>
