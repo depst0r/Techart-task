@@ -17,7 +17,8 @@ const initialState = {
     sizeY: String,
     result: Boolean,
     message: String,
-    total: String
+    total: String,
+    // choice: Boolean
 }
 
 export const rootReducer = (state = initialState, action) => {
@@ -25,7 +26,42 @@ export const rootReducer = (state = initialState, action) => {
         case BUILDING:
             return {
                 ...state,
-                building: action.type
+                building: action.payload
+            }
+        case HEIGHT:
+            return {
+                ...state,
+                height: action.payload
+            }
+        case MATERIAL:
+            return {
+                ...state,
+                material: action.payload
+            }
+        case SIZE_X:
+            return {
+                ...state,
+                sizeX: action.payload
+            }
+        case SIZE_Y:
+            return {
+                ...state,
+                sizeY: action.payload
+            }
+        case RESULT:
+            return {
+                ...state,
+                result: action.payload
+            }
+        case MESSAGE:
+            return {
+                ...state,
+                message: action.payload
+            }
+        case TOTAL: 
+            return {
+                ...state,
+                total: action.payload
             }
         default: 
             return state
